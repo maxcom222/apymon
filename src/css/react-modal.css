@@ -1,0 +1,37 @@
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+  z-index: 100;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+.ReactModal__Content {
+  transform: scale(0);
+  transition: transform 400ms cubic-bezier(0.02, 0.85, 0.01, 0.98);
+}
+
+.ReactModal__Content--after-open {
+  transform: scale(1);
+}
+
+.ReactModal__Content--before-close {
+  transform: scale(0);
+}
+
+@media (max-width: 991.98px) {
+  .ReactModal__Content {
+    height: 100%;
+    margin: 0 !important;
+    inset: 0 !important;
+    min-width: unset !important;
+    width: 100% !important;
+    border-radius: 0 !important;
+  }
+}
